@@ -1,0 +1,8 @@
+to make new item:
+create>new item
+name item (currently needs (Item) at the end
+add box collider
+add item pickup script
+set parent object
+set item
+set Invholder(weapon holder transform)
