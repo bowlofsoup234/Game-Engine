@@ -20,5 +20,5 @@ _xXx_First_Release_notes_XxX_
 - weapons transforms are now set equal to the transform of "Inv holder"
 
 * item sprites have not been set yet
-  *bug fixed - guns would shoot regardless of if they were equipped
-  *Bug - light for muzzle flash always on
+* bug fixed - guns would shoot regardless of if they were equipped
+* Bug - light for muzzle flash always on
