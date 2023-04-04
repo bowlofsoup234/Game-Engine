@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AK-47
   m_EditorClassIdentifier: 
   name: AK-47
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f516b011fdfa21943ae5ca3fed64a2e3, type: 3}

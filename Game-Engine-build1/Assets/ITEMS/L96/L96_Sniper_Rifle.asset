@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: L96_Sniper_Rifle
   m_EditorClassIdentifier: 
   name: L96_Sniper_Rifle
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 1998b06384a5a5c4d951cd03a5cf4ded, type: 3}
