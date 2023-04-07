@@ -52,10 +52,12 @@ public class Backpack : MonoBehaviour
 
         // Add the item to the inventory list
         items.Add(item);
+        Debug.Log(item + "woof peepee");
 
         // If there is a method registered for the OnItemChangedCallback event, invoke it
         if(OnItemChangedCallback != null)
             OnItemChangedCallback.Invoke();
+            Debug.Log("backpack added");
 
         // Return true to indicate that the item was successfully added to the inventory
         return true;
@@ -118,19 +120,18 @@ public class Backpack : MonoBehaviour
     }
 public void OnBackPackpress()
 {
-    Debug.Log("beans and toast");
-    
+   
     if (Backpackopen)
     {
         Backpackopen = false;
         backpackUI.SetActive(false);
-        Debug.Log("beans");
+     
     }
     else
     {
         backpackUI.SetActive(true);
         Backpackopen = true;
-        Debug.Log("toast");
+      
     }
 }
 }

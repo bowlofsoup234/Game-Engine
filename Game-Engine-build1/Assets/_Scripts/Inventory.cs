@@ -50,6 +50,7 @@ public class Inventory : MonoBehaviour
 
         // Add the item to the inventory list
         items.Add(item);
+        Debug.Log(item + "meow peepee");
 
         // If there is a method registered for the OnItemChangedCallback event, invoke it
         if(OnItemChangedCallback != null)

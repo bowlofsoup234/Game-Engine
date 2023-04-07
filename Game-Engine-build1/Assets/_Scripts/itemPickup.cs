@@ -27,8 +27,8 @@ public override void Interact()
 // Picks up the item and adds it to the player's inventory
 void Pickup()
 {
-    bool wasPickedup = Inventory.instance.Add(item); // Adds item to the inventory and returns true if successful
-    Debug.Log("Picking up item " + item.name); 
+    bool wasPickedup = Backpack.instance.Add(item); // Adds item to the inventory and returns true if successful
+    Debug.Log("Picking up item BP " + item.name); 
     if (wasPickedup)
     {
         Debug.Log("Sending child");
@@ -53,7 +53,7 @@ void Pickup()
 // Assigns the child object to the inventory holder
 public void Assigner(Transform Invholder)
 {
-    Debug.Log(child);
+    //Debug.Log(child);
     child.transform.SetParent(Invholder);
     child.transform.SetPositionAndRotation(Invholder.position, Invholder.rotation);
 }
