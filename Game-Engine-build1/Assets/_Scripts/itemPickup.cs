@@ -35,17 +35,12 @@ void Pickup()
         child = parentObject;
         Debug.Log(child);
         // If there are no child objects in the inventory, make the parent object active and assign it to the inventory holder
-        if (Invholder.transform.childCount == 0)
-        {
-            parentObject.gameObject.SetActive(true);
-            Assigner(Invholder);
-        }
+
         // If there are child objects in the inventory, make the parent object inactive
-        else
-        {
+
             parentObject.gameObject.SetActive(false);
             Debug.Log("Set inactive");
-        }
+    
         Assigner(Invholder); // Calls the Assigner function to assign the child object to the inventory holder
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 public class BackpackSlot : MonoBehaviour
 {
 
@@ -24,12 +25,14 @@ public class BackpackSlot : MonoBehaviour
  public void OnRemoveButton()
    {
       Backpack.instance.Remove(item);
+      
      
    }
    public void UseItem()
    {
       if(item != null)
       {
+         Debug.Log("231123");
          item.Use();
       }
    }

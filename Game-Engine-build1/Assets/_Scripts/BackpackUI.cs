@@ -39,7 +39,7 @@ public class BackpackUI : MonoBehaviour
     {
         toggleInv();
             
-        if(InventoryActive = false){
+        if(InventoryActive == false){
             backpackUI.SetActive(false);
             InventoryActive = true;  
         }    
@@ -71,14 +71,13 @@ public class BackpackUI : MonoBehaviour
 
     // Method to update the UI with the contents of the inventory
     public void UpdateBPUI()
-    { Debug.Log("69 wowowweeewow");
+    {
         // Loop through each inventory slot and either add the corresponding item to the slot or clear it if there is no item
         for(int i = 0; i < slots.Length; i++)
         {
             if(i< backpack.items.Count)
             {
                 slots[i].AddItem(backpack.items[i]);
-                Debug.Log(" 1 - wowowweeewow");
             } 
             else
             {

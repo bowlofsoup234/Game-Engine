@@ -6284,7 +6284,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1923350440}
-  - {fileID: 878253953}
   m_Father: {fileID: 1109309690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6696,7 +6695,6 @@ GameObject:
   - component: {fileID: 520954489}
   - component: {fileID: 520954490}
   - component: {fileID: 520954491}
-  - component: {fileID: 520954492}
   m_Layer: 0
   m_Name: weapon holder
   m_TagString: Untagged
@@ -6766,18 +6764,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88099e0ae62bd8640a71c264ae06d64a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &520954492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 520954487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73df91f9027b01c4eb16c39536a75288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &530713785
@@ -11751,6 +11737,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570507512}
   m_Mesh: {fileID: 4300000, guid: 7d0124d3bdb8cba4f834aae3a9962ddc, type: 3}
+--- !u!1 &577187470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577187471}
+  m_Layer: 0
+  m_Name: Backpack holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &577187471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577187470}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &581196552 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5083691845388364700, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
@@ -11973,6 +11990,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+--- !u!114 &695413328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3088093505816758318, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+  m_PrefabInstance: {fileID: 1887078292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d9ed50669a71c45a4f45647dc5631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -12272,42 +12300,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
---- !u!1 &878253952
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 878253953}
-  m_Layer: 0
-  m_Name: BackPackholder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &878253953
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 878253952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 351125236}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &882192137
 GameObject:
   m_ObjectHideFlags: 0
@@ -12499,7 +12491,7 @@ MonoBehaviour:
   gun: {fileID: 897868365}
   item: {fileID: 11400000, guid: 5f96eebf42ba95340b8527f26eff309b, type: 2}
   child: {fileID: 0}
-  Invholder: {fileID: 878253953}
+  Invholder: {fileID: 577187471}
   holder: {fileID: 0}
   isEquipped: 0
   Droping: 1
@@ -12699,6 +12691,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 520954488}
+  - {fileID: 577187471}
   m_Father: {fileID: 1454378829}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13881,7 +13874,6 @@ GameObject:
   - component: {fileID: 1274617690}
   - component: {fileID: 1274617689}
   - component: {fileID: 1274617688}
-  - component: {fileID: 1274617691}
   m_Layer: 5
   m_Name: BackPackButton
   m_TagString: Untagged
@@ -13992,7 +13984,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1274617691}
+      - m_Target: {fileID: 1454378835}
         m_TargetAssemblyTypeName: Backpack, Assembly-CSharp
         m_MethodName: OnBackPackpress
         m_Mode: 1
@@ -14004,25 +13996,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1274617691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274617686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45886709fc714b74a8fae64e86c5fca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backpackUI: {fileID: 351125235}
-  Backpackopen: 0
-  space: 20
-  parentObject: {fileID: 351125235}
-  itemToRemove: 
-  gameObjectToRemove: {fileID: 0}
-  items: []
 --- !u!1001 &1280967584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19132,7 +19105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backpackUI: {fileID: 351125235}
-  backpackholder: {fileID: 0}
+  backpackholder: {fileID: 577187470}
   itemsParent: {fileID: 1923350440}
   InventoryActive: 0
 --- !u!1 &1323451645 stripped
@@ -24789,7 +24762,7 @@ MonoBehaviour:
   gun: {fileID: 71434641}
   item: {fileID: 11400000, guid: 059c1dd6e8b09a1479d577112ac56453, type: 2}
   child: {fileID: 0}
-  Invholder: {fileID: 878253953}
+  Invholder: {fileID: 577187471}
   holder: {fileID: 0}
   isEquipped: 0
   Droping: 1
@@ -30459,6 +30432,30 @@ PrefabInstance:
     - target: {fileID: 5083691845388364700, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359719768314707470, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 695413328}
+    - target: {fileID: 5359719768314707470, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRemoveButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5359719768314707470, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BackpackSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865125052703561227, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 695413328}
+    - target: {fileID: 5865125052703561227, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UseItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865125052703561227, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BackpackSlot, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4ad1d148526b3d4895b2294c92757c1, type: 3}
