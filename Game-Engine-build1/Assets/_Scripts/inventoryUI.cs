@@ -68,7 +68,7 @@ public class inventoryUI : MonoBehaviour
             if(i< inventory.items.Count)
             {
                 slots[i].AddItem(inventory.items[i]);
-                Debug.Log("wowowweeewow normy");
+               
             } 
             else
             {

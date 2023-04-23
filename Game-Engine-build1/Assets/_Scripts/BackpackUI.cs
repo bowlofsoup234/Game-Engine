@@ -30,7 +30,7 @@ public class BackpackUI : MonoBehaviour
 
         // Call the toggleInv() method to set the UI to the initial state
         toggleInv();
-        Debug.Log(slots + "peepeepoopoo");
+       // Debug.Log(slots + "peepeepoopoo");
     }
 
     void Update(){

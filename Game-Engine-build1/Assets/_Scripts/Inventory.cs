@@ -34,11 +34,21 @@ public class Inventory : MonoBehaviour
     public GameObject parentObject;
     public string itemToRemove;
     public GameObject gameObjectToRemove;
+    public Item tmp;
+    public Item placeholder;
 
     // Declare a list to store the items in the inventory
     public List<Item> items = new List<Item>();
 
     // Method to add an item to the inventory
+    public void AddPlaceholders()
+    {
+    for(int i = 0; i < space; i++)
+    {
+        items.Add(placeholder);
+    }
+}
+
     public bool Add (Item item)
     {
         // If the inventory is already full, log a message and return false
@@ -103,5 +113,51 @@ public class Inventory : MonoBehaviour
         // Return the found game object reference, or null if no match was found
         return foundObject;
     }
+    public void SwapItemsInInventory(int indexA, int indexB)
+{
+    Debug.Log("Attempting to swap items at indexA: " + indexA + ", indexB: " + indexB);
+
+    if (indexA < 0 || indexA >= items.Count || indexB < 0 || indexB >= items.Count)
+    {
+        Debug.LogWarning("Index out of range: Unable to swap items in backpack. indexA: " + indexA + ", indexB: " + indexB);
+        return;
+    }
+
+
+
+    tmp = items[indexA];
+    items[indexA] = items[indexB];
+    items[indexB] = tmp;
+
+
+
+    if (OnItemChangedCallback != null)
+        OnItemChangedCallback.Invoke();
+
+    Debug.Log("Successfully swapped items at indexA: " + indexA + ", indexB: " + indexB);
+
+
+}
+public void SwapItemsBetweenLists(List<Item> sourceList, List<Item> destinationList, int sourceIndex, int destinationIndex)
+{
+    Debug.Log("Attempting to swap items from sourceIndex: " + sourceIndex + " to destinationIndex: " + destinationIndex);
+
+    if (sourceIndex < 0 || sourceIndex >= sourceList.Count || destinationIndex < 0 || destinationIndex >= destinationList.Count)
+    {
+        Debug.LogWarning("Index out of range: Unable to swap items between lists. sourceIndex: " + sourceIndex + ", destinationIndex: " + destinationIndex);
+        return;
+    }
+
+    Item item = sourceList[sourceIndex];
+    sourceList.RemoveAt(sourceIndex);
+    destinationList.Insert(destinationIndex, item);
+
+    Debug.Log("Successfully swapped items from sourceIndex: " + sourceIndex + " to destinationIndex: " + destinationIndex);
+
+}
+void Start()
+{
+   AddPlaceholders();
+}
 }
 

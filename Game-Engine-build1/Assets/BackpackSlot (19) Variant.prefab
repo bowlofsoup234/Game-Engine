@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2085371476199031339, guid: 47824fd1bbc39bf46b041f14f4da3368, type: 3}
       propertyPath: m_Name
-      value: BackpackSlot
+      value: BackpackSlot (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4693514517932100681, guid: 47824fd1bbc39bf46b041f14f4da3368, type: 3}
       propertyPath: m_SizeDelta.x
@@ -186,19 +186,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2602749837016328123, guid: 47824fd1bbc39bf46b041f14f4da3368, type: 3}
   m_PrefabInstance: {fileID: 3846430219057009848}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1174365255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1260885611479888643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c2797187d1d004b8c061975167a518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
 --- !u!225 &1174365256
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -216,20 +203,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2085371476199031339, guid: 47824fd1bbc39bf46b041f14f4da3368, type: 3}
   m_PrefabInstance: {fileID: 3846430219057009848}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3088093505816758318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2995449729873860243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d9ed50669a71c45a4f45647dc5631a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 333412755406555375}
-  removeButton: {fileID: 5359719768314707470}
 --- !u!61 &464712614441825100
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -256,6 +229,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 65.8531, y: 64.547806}
   m_EdgeRadius: 0
+--- !u!114 &3088093505816758318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2995449729873860243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d9ed50669a71c45a4f45647dc5631a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 333412755406555375}
+  removeButton: {fileID: 5359719768314707470}
+  itemName: 
+  parentObject: {fileID: 0}
 --- !u!114 &5359719768314707470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9151542440521493174, guid: 47824fd1bbc39bf46b041f14f4da3368, type: 3}
