@@ -12,25 +12,35 @@ public class BackpackSlot : MonoBehaviour, IDropHandler
    
 
     public void AddItem(Item newItem)
+{
+    item = newItem;
+    icon.sprite = item.icon;
+    icon.enabled = true;
+  
+    if (newItem.name == "placeholder")
     {
-        item = newItem;
-        icon.sprite = item.icon;
-        icon.enabled = true;
-        removeButton.interactable = true;
-        
-        itemName = newItem.name;
-        
-        DragAndDrop dragAndDrop = GetComponent<DragAndDrop>();
-        if (dragAndDrop != null)
-        {
-            dragAndDrop.RepresentedItem = newItem;
-            dragAndDrop.CurrentSlot = this;
-            dragAndDrop.GetComponent<Image>().sprite = newItem.icon;
-            dragAndDrop.GetComponent<Image>().enabled = true;
-
-            dragAndDrop.SetBackpackSlot(this);
-        }
+        removeButton.interactable = false; // Do not enable the remove button if the item name is "placeholder"
     }
+    else
+    {
+        removeButton.interactable = true;
+    }
+
+    itemName = newItem.name;
+    
+
+    DragAndDrop dragAndDrop = GetComponent<DragAndDrop>();
+    if (dragAndDrop != null)
+    {
+        dragAndDrop.RepresentedItem = newItem;
+        dragAndDrop.CurrentSlot = this;
+        dragAndDrop.GetComponent<Image>().sprite = newItem.icon;
+        dragAndDrop.GetComponent<Image>().enabled = true;
+
+        dragAndDrop.SetBackpackSlot(this);
+    }
+}
+
 
     public void ClearSlot()
     {
@@ -53,29 +63,35 @@ public class BackpackSlot : MonoBehaviour, IDropHandler
         }
     }
 
-    public void OnDrop(PointerEventData eventData)
+
+public void OnDrop(PointerEventData eventData)
 {
     Debug.Log("Item dropped from " + eventData.pointerDrag.GetComponent<DragAndDrop>().CurrentSlot + " to " + this);
 
     DragAndDrop dragAndDrop = eventData.pointerDrag.GetComponent<DragAndDrop>();
+    Inventory inventory = Inventory.instance;
     Backpack backpack = Backpack.instance;
-
-    if (dragAndDrop != null && backpack != null)
+    if (dragAndDrop != null && backpack != null) 
     {
-        // Get the current slot index and target slot index
-        int currentIndex = dragAndDrop.CurrentSlot.transform.GetSiblingIndex();
-        int targetIndex = transform.GetSiblingIndex();
+        if(eventData.pointerDrag.GetComponent<DragAndDrop>().CurrentSlot = null )
+        { 
+            int currentIndex = dragAndDrop.currentSlot.transform.GetSiblingIndex();
+            int targetIndex = transform.GetSiblingIndex();
+            Debug.Log("dropped from BP slot");
+            inventory.SwapItemsBetweenLists(backpack.items, inventory.items, currentIndex, targetIndex);
+            inventory.OnItemChangedCallback.Invoke();
+            backpack.OnItemChangedCallback.Invoke();
+            
 
-        // Swap the items in the backpack
-        backpack.SwapItemsInBackpack(currentIndex, targetIndex);
-    
-        if(backpack.swapped){
-            Debug.Log("swapped");
-            backpack.swapped = false;
-          
+        }
+        else 
 
+        {
+            int currentIndex = dragAndDrop.CurrentSlot.transform.GetSiblingIndex();
+            int targetIndex = transform.GetSiblingIndex(); 
+            Debug.Log("dropped from INV slot");
+            backpack.SwapItemsInBackpack(currentIndex, targetIndex);
         }
     }
 }
-
 }

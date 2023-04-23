@@ -38,6 +38,7 @@ public int space = 21;
 public bool swapped = false;
 
 public GameObject parentObject;
+public Item placeholder;
 
 public string itemToRemove;
 public GameObject gameObjectToRemove;
@@ -45,40 +46,45 @@ public Item tmp;
 
 // Declare a list to store the items in the inventory
 public List<Item> items = new List<Item>();
-public List<Item> copiedItems = new List<Item>();
+
 
 // Method to add placeholders to fill up remaining space in the inventory
 public void AddPlaceholders()
 {
-
+ for(int i = 0; i < space; i++)
     {
-        items.Add(null);
+        items.Add(placeholder);
     }
 }
 
 // Method to add an item to the inventory
 
-public bool Add(Item item)
+ public bool Add(Item item)
 {
     Debug.Log("booop");
-    // If the inventory is already full, log a message and return false
-    if (items.Count >= space )
-    {
-        Debug.Log("not enough room");
-        return false;
-    }
 
-    // Add the item to the inventory list
-    items.Add(item);
+    int index = items.FindIndex(x => x == placeholder);
+    if (index != -1)
+    {
+        items[index] = item;
+    }
+    else
+    {
+        if (items.Count >= space)
+        {
+            Debug.Log("not enough room");
+            return false;
+        }
+        items.Add(item);
+    }
     Debug.Log(item + "woof peepee");
 
-    // If there is a method registered for the OnItemChangedCallback event, invoke it
     if (OnItemChangedCallback != null)
         OnItemChangedCallback.Invoke();
 
-    // Return true to indicate that the item was successfully added to the inventory
     return true;
 }
+
 
 // Method to remove an item from the inventory
 public void Remove(Item item)
@@ -95,6 +101,7 @@ public void Remove(Item item)
     {
         gameObjectToRemove.SetActive(true);
         items.Remove(item);
+        items.Add(placeholder);
 
         if (OnItemChangedCallback != null)
         {
@@ -153,14 +160,16 @@ public void SwapItemsInBackpack(int indexA, int indexB)
 void Start()
 {
     backpackUI.SetActive(false);
-   //AddPlaceholders();
+   AddPlaceholders();
 }
 
 // Update is called once per frame
 void Update()
 {
-
+    
 }
+
+
 
 public void OnBackPackpress()
 {

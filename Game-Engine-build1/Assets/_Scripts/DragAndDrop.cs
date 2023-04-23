@@ -8,12 +8,15 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public Item RepresentedItem { get; set; }
     public BackpackSlot CurrentSlot { get; set; }
 
+    public InventorySlot currentSlot {get; set;}
+
     [SerializeField] private Canvas canvas;
 
     private RectTransform rectTransform;
     private Vector2 originalPosition;
 
     private BackpackSlot backpackSlot;
+    private InventorySlot inventorySlot;
     private CanvasGroup canvasGroup;
 
     public void SetBackpackSlot(BackpackSlot slot)
@@ -21,6 +24,10 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         backpackSlot = slot;
     }
 
+    public void SetInventorySlot(InventorySlot slot)
+    {
+        inventorySlot = slot;
+    }
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -85,7 +92,6 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void snapper()
     {
-     Debug.Log("No target slot found");
     rectTransform.anchoredPosition = originalPosition;
     }
 }
